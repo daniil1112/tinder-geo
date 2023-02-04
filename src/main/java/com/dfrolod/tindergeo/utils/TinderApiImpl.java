@@ -53,4 +53,12 @@ public class TinderApiImpl {
         return responseFuture.join();
     }
 
+    public void getMatches(){
+
+    }
+
+    private void getMatchesPaginate(int page, int perPage){
+        var url = URI.create(String.format("%s/v2/matches?locale=ru&count=%i&message=%i&is_tinder_u=false", HOST, perPage, page));
+    }
+
 }
